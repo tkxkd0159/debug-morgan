@@ -48,7 +48,7 @@ if (conf.nodeEnv == "production") {
 } else {
     app.use(cors());
     // app.use(morgan("dev"));
-    // app.use(morgan("common", { stream: accessLogStream }));
+    app.use(morgan("common", { stream: accessLogStream }));
 }
 
 app.use(session(sessOpt));
